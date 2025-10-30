@@ -96,6 +96,18 @@
     font-size: 1rem;
   }
 }
+/* Active Highlight Style */
+.location-item.active {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(42,7,249,0.25) !important;
+  border-color: #2A07F9 !important;
+  background: linear-gradient(135deg, #f8f9ff, #ffffff);
+  z-index: 10;
+  position: relative;
+}
+.location-item.active .icon {
+  transform: scale(1.1) rotate(5deg);
+}
 </style>
 
 <body>
@@ -246,135 +258,173 @@
       </p>
     </div>
 
-    <!-- Search + Dropdown -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-7">
-        <div class="location-finder p-4 bg-white rounded-4 shadow-sm border-0">
-          <div class="input-group input-group-lg">
-            <span class="input-group-text bg-transparent border-0">
-              <i class="fas fa-search-location text-primary"></i>
-            </span>
-            <select id="areaFinder" class="form-select form-select-lg border-start-0 ps-0" onchange="goToLocation(this.value)">
-              <option value="" selected disabled>Search or select your area...</option>
-              <option value="amber-trails.html">Amber Trails</option>
-              <option value="charleswood.html">Charleswood</option>
-              <option value="crestview.html">Crestview</option>
-              <option value="east-st-paul.html">East St. Paul</option>
-              <option value="elmwood.html">Elmwood</option>
-              <option value="fort-garry.html">Fort Garry</option>
-              <option value="headingley.html">Headingley</option>
-              <option value="north-kildonan.html">North Kildonan</option>
-              <option value="sage-creek.html">Sage Creek</option>
-              <option value="st-andrews.html">St. Andrews</option>
-              <option value="st-boniface.html">St. Boniface</option>
-              <option value="selkirk.html">Selkirk</option>
-              <option value="st-james.html">St. James</option>
-              <option value="st-norbert.html">St. Norbert</option>
-              <option value="st-vital.html">St. Vital</option>
-              <option value="transcona.html">Transcona</option>
-              <option value="tuxedo.html">Tuxedo</option>
-              <option value="waverley-west.html">Waverley West</option>
-              <option value="west-st-paul.html">West St. Paul</option>
-            </select>
-            <button class="btn btn-primary rounded-end" onclick="goToLocation(document.getElementById('areaFinder').value)">
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
+<!-- Search + Dropdown (UPDATED) -->
+<div class="row justify-content-center mb-5">
+  <div class="col-lg-7">
+    <div class="location-finder p-4 bg-white rounded-4 shadow-sm border-0">
+      <div class="input-group input-group-lg">
+        <span class="input-group-text bg-transparent border-0">
+          <i class="fas fa-search-location text-primary"></i>
+        </span>
+        <select id="areaFinder" class="form-select form-select-lg border-start-0 ps-0" onchange="highlightLocation(this.value)">
+          <option value="" selected disabled>Search or select your area...</option>
+          <option value="amber-trails">Amber Trails</option>
+          <option value="charleswood">Charleswood</option>
+          <option value="crestview">Crestview</option>
+          <option value="east-st-paul">East St. Paul</option>
+          <option value="elmwood">Elmwood</option>
+          <option value="fort-garry">Fort Garry</option>
+          <option value="headingley">Headingley</option>
+          <option value="north-kildonan">North Kildonan</option>
+          <option value="sage-creek">Sage Creek</option>
+          <option value="st-andrews">St. Andrews</option>
+          <option value="st-boniface">St. Boniface</option>
+          <option value="selkirk">Selkirk</option>
+          <option value="st-james">St. James</option>
+          <option value="st-norbert">St. Norbert</option>
+          <option value="st-vital">St. Vital</option>
+          <option value="transcona">Transcona</option>
+          <option value="waverley-west">Waverley West</option>
+          <option value="west-st-paul">West St. Paul</option>
+        </select>
+        <button class="btn btn-primary rounded-end" onclick="highlightLocation(document.getElementById('areaFinder').value)">
+          Search
+        </button>
       </div>
     </div>
-
-    <!-- Interactive Grid -->
-    <div class="location-grid-premium">
-      <div class="row g-3">
-        <!-- Generate 20 location cards -->
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="amber-trails.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Amber Trails</h4>
-            <p class="text">North Winnipeg</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="charleswood.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Charleswood</h4>
-            <p class="text">West Winnipeg</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="crestview.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Crestview</h4>
-            <p class="text">West End</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="east-st-paul.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">East St. Paul</h4>
-            <p class="text">Rural Municipality</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="elmwood.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Elmwood</h4>
-            <p class="text">East Winnipeg</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="fort-garry.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Fort Garry</h4>
-            <p class="text">South Winnipeg</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="headingley.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Headingley</h4>
-            <p class="text">Near Winnipeg</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="north-kildonan.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">North Kildonan</h4>
-            <p class="text">Northeast</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="sage-creek.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Sage Creek</h4>
-            <p class="text">Southeast</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="st-vital.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">St. Vital</h4>
-            <p class="text">South Central</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="transcona.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Transcona</h4>
-            <p class="text">East End</p>
-          </a>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
-          <a href="tuxedo.html" class="location-card">
-            <div class="icon"><i class="fas fa-home"></i></div>
-            <h4 class="title">Tuxedo</h4>
-            <p class="text">Southwest</p>
-          </a>
-        </div>
-        <!-- Add more as needed -->
-      </div>
+  </div>
+</div>
+<!-- Interactive Grid (UPDATED – NO NEW PAGE, HIGHLIGHT ONLY) -->
+<div class="location-grid-premium">
+  <div class="row g-3">
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="amber-trails" onclick="highlightLocation('amber-trails'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Amber Trails</h4>
+        <p class="text">North Winnipeg</p>
+      </a>
     </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="charleswood" onclick="highlightLocation('charleswood'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Charleswood</h4>
+        <p class="text">West Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="crestview" onclick="highlightLocation('crestview'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Crestview</h4>
+        <p class="text">West End</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="east-st-paul" onclick="highlightLocation('east-st-paul'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">East St. Paul</h4>
+        <p class="text">Rural Municipality</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="elmwood" onclick="highlightLocation('elmwood'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Elmwood</h4>
+        <p class="text">East Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="fort-garry" onclick="highlightLocation('fort-garry'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Fort Garry</h4>
+        <p class="text">South Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="headingley" onclick="highlightLocation('headingley'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Headingley</h4>
+        <p class="text">Near Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="north-kildonan" onclick="highlightLocation('north-kildonan'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">North Kildonan</h4>
+        <p class="text">Northeast</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="sage-creek" onclick="highlightLocation('sage-creek'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Sage Creek</h4>
+        <p class="text">Southeast</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="st-andrews" onclick="highlightLocation('st-andrews'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">St. Andrews</h4>
+        <p class="text">North of Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="st-boniface" onclick="highlightLocation('st-boniface'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">St. Boniface</h4>
+        <p class="text">Southeast Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="selkirk" onclick="highlightLocation('selkirk'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Selkirk</h4>
+        <p class="text">North of Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="st-james" onclick="highlightLocation('st-james'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">St. James</h4>
+        <p class="text">West Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="st-norbert" onclick="highlightLocation('st-norbert'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">St. Norbert</h4>
+        <p class="text">South Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="st-vital" onclick="highlightLocation('st-vital'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">St. Vital</h4>
+        <p class="text">South Central</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="transcona" onclick="highlightLocation('transcona'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Transcona</h4>
+        <p class="text">East End</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="waverley-west" onclick="highlightLocation('waverley-west'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">Waverley West</h4>
+        <p class="text">Southwest Winnipeg</p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+      <a href="#" class="location-card location-item" data-location="west-st-paul" onclick="highlightLocation('west-st-paul'); return false;">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4 class="title">West St. Paul</h4>
+        <p class="text">Northwest Rural</p>
+      </a>
+    </div>
+  </div>
+</div>
 
     <!-- CTA -->
     <div class="text-center mt-5">
@@ -532,28 +582,27 @@
   <script src="assets/js/app.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Custom JS for Highlight -->
-  <script>
-    function highlightLocation(selectedValue) {
-      // Remove previous highlight
-      document.querySelectorAll('.location-item').forEach(item => {
-        item.classList.remove('active');
-      });
-      // Add highlight to selected
-      const selectedItem = document.querySelector(`.location-item[data-location="${selectedValue}"]`);
-      if (selectedItem) {
-        selectedItem.classList.add('active');
-        selectedItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  </script>
-
 <script>
-function goToLocation(value) {
-  if (value) {
-    window.location.href = value;
+function highlightLocation(locationSlug) {
+  if (!locationSlug) return;
+
+  // Remove active from all
+  document.querySelectorAll('.location-item').forEach(item => {
+    item.classList.remove('active');
+  });
+
+  // Add active to selected
+  const target = document.querySelector(`.location-item[data-location="${locationSlug}"]`);
+  if (target) {
+    target.classList.add('active');
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
+
+  // Sync dropdown
+  const select = document.getElementById('areaFinder');
+  if (select) select.value = locationSlug;
 }
+</script>
 
 // Optional: Add search filter later if needed
 </script>
