@@ -28,6 +28,75 @@
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+  /* Premium Location Page Styles */
+.location-finder {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+}
+.location-finder .form-select {
+  font-weight: 500;
+  color: #333;
+}
+.location-finder .btn {
+  padding: 0 20px;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.location-card {
+  display: block;
+  background: white;
+  padding: 1.5rem 1rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.35s ease;
+  border: 1px solid #eee;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.location-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(42,7,249,0.15);
+  border-color: #2A07F9;
+}
+.location-card .icon {
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, #2A07F9, #068FFF);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.location-card:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+}
+.location-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: #222;
+}
+.location-card p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .location-card {
+    padding: 1rem;
+  }
+  .location-card h4 {
+    font-size: 1rem;
+  }
+}
+</style>
 
 <body>
   <!-- Preloader -->
@@ -75,7 +144,16 @@
         <li><a href="contact.html">Contact Us</a></li>
 
         <!-- Location -->
-        <li><a href="location.html">Location</a></li>
+       <li class="menu-item-has-children">
+  <a href="#">Location</a>
+  <ul class="sub-menu">
+    <li><a href="location.html">All Service Areas</a></li>
+    <li><a href="amber-trails.html">Amber Trails</a></li>
+    <li><a href="charleswood.html">Charleswood</a></li>
+    <li><a href="st-vital.html">St. Vital</a></li>
+    <!-- Add more -->
+  </ul>
+</li>
       </ul>
     </div>
   </div>
@@ -131,7 +209,16 @@
                   <li><a href="financing.html">Financing</a></li>
                   <li><a href="pricing.html">Maintenance Plan</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="location.html">Location</a></li>
+                  <li class="menu-item-has-children">
+  <a href="#">Location</a>
+  <ul class="sub-menu">
+    <li><a href="location.html">All Service Areas</a></li>
+    <li><a href="amber-trails.html">Amber Trails</a></li>
+    <li><a href="charleswood.html">Charleswood</a></li>
+    <li><a href="st-vital.html">St. Vital</a></li>
+    <!-- Add more -->
+  </ul>
+</li>
                 </ul>
               </nav>
               <button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
@@ -145,96 +232,170 @@
     </div>
   </header>
 
-  <!-- Breadcrumb -->
-  <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/breadcumb-bg.jpg">
-    <div class="container">
-      <div class="breadcumb-content">
-        <h1 class="breadcumb-title">Service Locations</h1>
-        <ul class="breadcumb-menu">
-          <li><a href="index.html">Home</a></li>
-          <li>Service Locations</li>
-        </ul>
-      </div>
+<!-- ===== PREMIUM SERVICE LOCATIONS SECTION START ===== -->
+<section class="space bg-light">
+  <div class="container">
+    <!-- Title -->
+    <div class="title-area text-center mb-5">
+      <span class="sub-title style2">
+        <img src="assets/img/theme-img/title_icon.svg" alt="Icon"> Proudly Serving
+      </span>
+      <h2 class="sec-title mb-3">HVAC Services Across Winnipeg</h2>
+      <p class="text-muted max-w-650 mx-auto">
+        We deliver expert heating, cooling, and air quality solutions to homes and businesses in every corner of Winnipeg and surrounding areas.
+      </p>
     </div>
-  </div>
 
-  <!-- Main Content: Service Locations -->
-  <section class="space">
-    <div class="container">
-      <div class="title-area text-center">
-        <span class="sub-title"><img src="assets/img/theme-img/title_icon.svg" alt="Icon"> Proudly Serving</span>
-        <h2 class="sec-title">Our Service Areas in Winnipeg & Surrounding</h2>
-        <p class="mt-3">We provide expert HVAC services across Winnipeg and nearby communities.</p>
-      </div>
-
-      <!-- Location Dropdown + Searchable List -->
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="location-search-box">
-            <label for="locationSelect" class="form-label"><i class="fas fa-search-location"></i> Select Your Area</label>
-            <select id="locationSelect" class="form-select th-select" onchange="highlightLocation(this.value)">
-              <option value="" selected disabled>Choose your neighborhood...</option>
-              <option value="Amber Trails, MB">Amber Trails, MB</option>
-              <option value="Charleswood, MB">Charleswood, MB</option>
-              <option value="Crestview, MB">Crestview, MB</option>
-              <option value="East St. Paul, MB">East St. Paul, MB</option>
-              <option value="Elmwood, MB">Elmwood, MB</option>
-              <option value="Fort Garry, MB">Fort Garry, MB</option>
-              <option value="Headingley, MB">Headingley, MB</option>
-              <option value="North Kildonan, MB">North Kildonan, MB</option>
-              <option value="Sage Creek, MB">Sage Creek, MB</option>
-              <option value="St. Andrews, MB">St. Andrews, MB</option>
-              <option value="St. Boniface, MB">St. Boniface, MB</option>
-              <option value="Selkirk, MB">Selkirk, MB</option>
-              <option value="St. James, MB">St. James, MB</option>
-              <option value="St. Norbert, MB">St. Norbert, MB</option>
-              <option value="St. Vital, MB">St. Vital, MB</option>
-              <option value="Transcona, MB">Transcona, MB</option>
-              <option value="Tuxedo, MB">Tuxedo, MB</option>
-              <option value="Waverley West, MB">Waverley West, MB</option>
-              <option value="West St. Paul, MB">West St. Paul, MB</option>
-              <option value="Winnipeg, MB">Winnipeg, MB (All Areas)</option>
+    <!-- Search + Dropdown -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7">
+        <div class="location-finder p-4 bg-white rounded-4 shadow-sm border-0">
+          <div class="input-group input-group-lg">
+            <span class="input-group-text bg-transparent border-0">
+              <i class="fas fa-search-location text-primary"></i>
+            </span>
+            <select id="areaFinder" class="form-select form-select-lg border-start-0 ps-0" onchange="goToLocation(this.value)">
+              <option value="" selected disabled>Search or select your area...</option>
+              <option value="amber-trails.html">Amber Trails</option>
+              <option value="charleswood.html">Charleswood</option>
+              <option value="crestview.html">Crestview</option>
+              <option value="east-st-paul.html">East St. Paul</option>
+              <option value="elmwood.html">Elmwood</option>
+              <option value="fort-garry.html">Fort Garry</option>
+              <option value="headingley.html">Headingley</option>
+              <option value="north-kildonan.html">North Kildonan</option>
+              <option value="sage-creek.html">Sage Creek</option>
+              <option value="st-andrews.html">St. Andrews</option>
+              <option value="st-boniface.html">St. Boniface</option>
+              <option value="selkirk.html">Selkirk</option>
+              <option value="st-james.html">St. James</option>
+              <option value="st-norbert.html">St. Norbert</option>
+              <option value="st-vital.html">St. Vital</option>
+              <option value="transcona.html">Transcona</option>
+              <option value="tuxedo.html">Tuxedo</option>
+              <option value="waverley-west.html">Waverley West</option>
+              <option value="west-st-paul.html">West St. Paul</option>
             </select>
-          </div>
-
-          <div class="location-grid mt-40">
-            <div class="row gy-3">
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Amber Trails, MB">Amber Trails</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Charleswood, MB">Charleswood</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Crestview, MB">Crestview</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="East St. Paul, MB">East St. Paul</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Elmwood, MB">Elmwood</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Fort Garry, MB">Fort Garry</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Headingley, MB">Headingley</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="North Kildonan, MB">North Kildonan</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Sage Creek, MB">Sage Creek</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="St. Andrews, MB">St. Andrews</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="St. Boniface, MB">St. Boniface</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Selkirk, MB">Selkirk</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="St. James, MB">St. James</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="St. Norbert, MB">St. Norbert</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="St. Vital, MB">St. Vital</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Transcona, MB">Transcona</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Tuxedo, MB">Tuxedo</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Waverley West, MB">Waverley West</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="West St. Paul, MB">West St. Paul</div></div>
-              <div class="col-6 col-sm-4 col-md-3"><div class="location-item" data-location="Winnipeg, MB">Winnipeg (Citywide)</div></div>
-            </div>
+            <button class="btn btn-primary rounded-end" onclick="goToLocation(document.getElementById('areaFinder').value)">
+              <i class="fas fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- CTA -->
-      <div class="text-center mt-5">
-        <p><strong>Not sure if we serve your area?</strong> <a href="contact.html" class="text-decoration-underline">Contact us</a> and we'll confirm!</p>
+    <!-- Interactive Grid -->
+    <div class="location-grid-premium">
+      <div class="row g-3">
+        <!-- Generate 20 location cards -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="amber-trails.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Amber Trails</h4>
+            <p class="text">North Winnipeg</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="charleswood.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Charleswood</h4>
+            <p class="text">West Winnipeg</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="crestview.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Crestview</h4>
+            <p class="text">West End</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="east-st-paul.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">East St. Paul</h4>
+            <p class="text">Rural Municipality</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="elmwood.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Elmwood</h4>
+            <p class="text">East Winnipeg</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="fort-garry.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Fort Garry</h4>
+            <p class="text">South Winnipeg</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="headingley.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Headingley</h4>
+            <p class="text">Near Winnipeg</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="north-kildonan.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">North Kildonan</h4>
+            <p class="text">Northeast</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="sage-creek.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Sage Creek</h4>
+            <p class="text">Southeast</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="st-vital.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">St. Vital</h4>
+            <p class="text">South Central</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="transcona.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Transcona</h4>
+            <p class="text">East End</p>
+          </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-3">
+          <a href="tuxedo.html" class="location-card">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <h4 class="title">Tuxedo</h4>
+            <p class="text">Southwest</p>
+          </a>
+        </div>
+        <!-- Add more as needed -->
       </div>
     </div>
-  </section>
 
-  <!-- Map Section -->
-  <div class="contact-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2569.997!2d-97.1384!3d49.8951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73f0a!2sWinnipeg%2C%20MB!5e0!3m2!1sen!2sca!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    <!-- CTA -->
+    <div class="text-center mt-5">
+      <p class="mb-3">
+        <strong>Not listed?</strong> We likely still serve your area!
+      </p>
+      <a href="contact.html" class="th-btn">
+        Check Availability <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
   </div>
+</section>
+<!-- ===== PREMIUM SERVICE LOCATIONS SECTION END ===== -->
+
+<!-- Interactive Map -->
+<div class="contact-map overflow-hidden">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82000.0!2d-97.201!3d49.895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea73f0a!2sWinnipeg%2C%20MB!5e0!3m2!1sen!2sca!4v1234567890" 
+    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</div>
     <footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_1.jpg">
     <div class="shape-mockup spin" data-top="14%" data-left="4%"><img src="assets/img/shape/dots_1.svg" alt="shape">
     </div>
@@ -387,27 +548,14 @@
     }
   </script>
 
-  <!-- Custom CSS -->
-  <style>
-    .location-search-box { margin-bottom: 20px; }
-    .location-search-box .form-select { font-size: 1.1rem; padding: 15px; border-radius: 8px; }
-    .location-grid .location-item {
-      padding: 12px 8px;
-      text-align: center;
-      background: #f8f9fa;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: all 0.3s;
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-    .location-grid .location-item:hover,
-    .location-grid .location-item.active {
-      background: #2A07F9;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(42,7,249,0.3);
-    }
-  </style>
+<script>
+function goToLocation(value) {
+  if (value) {
+    window.location.href = value;
+  }
+}
+
+// Optional: Add search filter later if needed
+</script>
 </body>
 </html>
