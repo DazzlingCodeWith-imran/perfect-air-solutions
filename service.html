@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Rakar - Handyman Multipurpose Repairing Services HTML Template - Our Services</title>
+  <title>Perfect Air Solutions | HVAC Contractor Winnipeg, MB - Our Services</title>
   <meta name="author" content="Rakar">
   <meta name="description" content="Rakar - Handyman Multipurpose Repairing Services HTML Template">
   <meta name="keywords" content="Rakar - Handyman Multipurpose Repairing Services HTML Template">
@@ -31,10 +31,159 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="../../css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap"
     rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+
+
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+  .service-zigzag {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Image Styling */
+  .service-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+  }
+
+  .service-img img:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Content Area */
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+  }
+
+  .service-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #e74c3c;
+    font-weight: 600;
+  }
+
+  .service-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .service-content ul {
+    margin-bottom: 25px;
+    color: #666;
+    padding: 0;
+    list-style: none;
+  }
+
+  .service-content ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.6;
+  }
+
+  .service-content ul li::before {
+    content: "✓";
+    color: #e74c3c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* Right-Aligned Layout Fix */
+  .flex-lg-row-reverse .service-content {
+    text-align: right;
+    padding: 0 40px;
+  }
+
+  .flex-lg-row-reverse .service-content ul li {
+    padding-left: 0;
+    padding-right: 25px;
+  }
+
+  .flex-lg-row-reverse .service-content ul li::before {
+    left: auto;
+    right: 0;
+  }
+
+  /* Button Size Chhota + Stylish */
+  .th-btn.btn-sm {
+    display: inline-block;
+    width: auto;
+    /* text ke hisab se width */
+    padding: 10px 22px;
+    /* height aur width dono balanced */
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: #e74c3c;
+    color: #fff;
+    transition: 0.3s ease;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+
+
+  .th-btn.btn-sm:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+  }
+
+  .th-btn.btn-sm i {
+    font-size: 12px;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+
+    .service-zigzag,
+    .service-zigzag.flex-lg-row-reverse {
+      flex-direction: column !important;
+      text-align: center;
+    }
+
+    .service-content {
+      padding: 20px 15px !important;
+      text-align: center !important;
+    }
+
+    .service-content ul {
+      text-align: left;
+      display: inline-block;
+    }
+
+    .service-content ul li {
+      padding-left: 25px !important;
+      padding-right: 0 !important;
+    }
+
+    .service-content ul li::before {
+      left: 0 !important;
+      right: auto !important;
+    }
+
+    .flex-lg-row-reverse .service-content {
+      text-align: center !important;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 
 <body>
   <div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
@@ -53,64 +202,45 @@
           class="fa-solid fa-droplet"></i></button></div>
     <p class="color-scheme-text">Or custom color..</p><input type="color" id="thcolorpicker" value="#2A07F9">
   </div>
-  <div class="th-menu-wrapper">
-    <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-      <div class="mobile-logo"><a href="home-handyman.html"><img src="assets/img/logo.svg" alt="Rakar"></a></div>
-      <div class="th-mobile-menu">
-        <ul>
-          <li class="menu-item-has-children"><a href="home-handyman.html">Home</a>
-            <ul class="sub-menu">
-              <li><a href="home-handyman.html">Home Handyman</a></li>
-              <li><a href="home-office-repair.html">Home Office Repair</a></li>
-              <li><a href="home-electrician.html">Home Electrician</a></li>
-              <li><a href="home-air-condition.html">Home Air Condition</a></li>
-              <li><a href="home-carpentry.html">Home Carpentry</a></li>
-            </ul>
-          </li>
-          <li><a href="about.html">About Us</a></li>
-          <li class="menu-item-has-children"><a href="#">Our Services</a>
-            <ul class="sub-menu">
-              <li><a href="service.html">Our Services</a></li>
-              <li><a href="service-details.html">Service Details</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children"><a href="#">Pages</a>
-            <ul class="sub-menu">
-              <li class="menu-item-has-children"><a href="#">Shop</a>
-                <ul class="sub-menu">
-                  <li><a href="shop.html">Shop</a></li>
-                  <li><a href="shop-details.html">Shop Details</a></li>
-                  <li><a href="cart.html">Cart Page</a></li>
-                  <li><a href="checkout.html">Checkout</a></li>
-                  <li><a href="wishlist.html">Wishlist</a></li>
-                </ul>
-              </li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="team-details.html">Team Details</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="pricing.html">Price Plan</a></li>
-              <li><a href="testimonial.html">Testimonials</a></li>
-              <li><a href="faq.html">Faq Page</a></li>
-              <li><a href="error.html">Error Page</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children"><a href="#">Blog</a>
-            <ul class="sub-menu">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children"><a href="#">Project</a>
-            <ul class="sub-menu">
-              <li><a href="project.html">Project</a></li>
-              <li><a href="project-details.html">Project Details</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+ <div class="th-menu-wrapper">
+  <div class="th-menu-area text-center">
+    <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+    <div class="mobile-logo">
+      <a href="index.html"><img src="assets/img/logo/logo.svg" alt="Rakar"></a>
+    </div>
+
+    <div class="th-mobile-menu">
+      <ul>
+        <!-- Home -->
+        <li><a href="index.html">Home</a></li>
+
+        <!-- About -->
+        <li><a href="about.html">About Us</a></li>
+
+        <!-- Services (only dropdown item) -->
+        <li class="menu-item-has-children">
+          <a href="service.html">Services</a>
+          <ul class="sub-menu">
+            <li><a href="service.html">All Services</a></li>
+            <!-- <li><a href="service-details.html">Service Details</a></li> -->
+          </ul>
+        </li>
+
+        <!-- Financing -->
+        <li><a href="financing.html">Financing</a></li>
+
+        <!-- Maintenance Plan -->
+        <li><a href="pricing.html">Maintenance Plan</a></li>
+
+        <!-- Contact -->
+        <li><a href="contact.html">Contact Us</a></li>
+
+        <!-- Location -->
+        <li><a href="location.html">Location</a></li>
+      </ul>
     </div>
   </div>
+</div>
   <header class="th-header header-layout1">
     <div class="header-top">
       <div class="container">
@@ -118,8 +248,8 @@
           <div class="col-auto d-none d-lg-block">
             <div class="header-links">
               <ul>
-                <li><i class="fas fa-location-dot"></i> 45 New Eskaton Road, Austria</li>
-                <li><i class="fas fa-clock"></i> Sun to Friday: 8.00 am - 7.00 pm</li>
+                <li><i class="fas fa-location-dot"></i> 19 Stoney Lake Bay, Winnipeg, MB R2W 1K7, Canada</li>
+                <li><i class="fas fa-clock"></i> Monday to Friday: 8.00 am - 7.00 pm</li>
               </ul>
             </div>
           </div>
@@ -140,67 +270,85 @@
         <div class="menu-area">
           <div class="row align-items-center justify-content-between">
             <div class="col-auto">
-              <div class="header-logo"><a href="home-handyman.html"><img src="assets/img/logo.svg" alt="Rakar"></a>
+              <div class="header-logo"><a href="index.html"><img src="assets/img/logo/logo.svg" style="width: 210px;"
+                    alt="Rakar"></a>
               </div>
             </div>
             <div class="col-auto">
               <nav class="main-menu d-none d-lg-inline-block">
                 <ul>
-                  <li class="menu-item-has-children"><a href="home-handyman.html">Home</a>
-                    <ul class="sub-menu">
-                      <li><a href="home-handyman.html">Home Handyman</a></li>
-                      <li><a href="home-office-repair.html">Home Office Repair</a></li>
-                      <li><a href="home-electrician.html">Home Electrician</a></li>
-                      <li><a href="home-air-condition.html">Home Air Condition</a></li>
-                      <li><a href="home-carpentry.html">Home Carpentry</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About Us</a></li>
-                  <li class="menu-item-has-children"><a href="#">Our Services</a>
+
+                  <!-- SERVICES DROPDOWN START -->
+                  <li class="menu-item-has-children">
+                    <a href="service.html">Services</a>
                     <ul class="sub-menu">
-                      <li><a href="service.html">Our Services</a></li>
-                      <li><a href="service-details.html">Service Details</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a href="#">Pages</a>
-                    <ul class="sub-menu">
-                      <li class="menu-item-has-children"><a href="#">Shop</a>
+
+                      <!-- Air Conditioning -->
+                      <li class="menu-item-has-children">
+                        <a href="#">Air Conditioning</a>
                         <ul class="sub-menu">
-                          <li><a href="shop.html">Shop</a></li>
-                          <li><a href="shop-details.html">Shop Details</a></li>
-                          <li><a href="cart.html">Cart Page</a></li>
-                          <li><a href="checkout.html">Checkout</a></li>
-                          <li><a href="wishlist.html">Wishlist</a></li>
+                          <li><a href="service.html#air-conditioning">AC Replacement in Winnipeg, MB</a></li>
+                          <li><a href="service.html#air-conditioning">AC Service in Winnipeg, MB</a></li>
                         </ul>
                       </li>
-                      <li><a href="team.html">Team</a></li>
-                      <li><a href="team-details.html">Team Details</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      <li><a href="gallery.html">Gallery</a></li>
-                      <li><a href="pricing.html">Price Plan</a></li>
-                      <li><a href="testimonial.html">Testimonials</a></li>
-                      <li><a href="faq.html">Faq Page</a></li>
-                      <li><a href="error.html">Error Page</a></li>
+
+                      <!-- Heating -->
+                      <li class="menu-item-has-children">
+                        <a href="#">Heating</a>
+                        <ul class="sub-menu">
+                          <li><a href="service.html#heating">Furnace Installation in Winnipeg, MB</a></li>
+                          <li><a href="service.html#heating">Furnace Maintenance in Winnipeg, MB</a></li>
+                          <li><a href="service.html#heating">Furnace Repair in Winnipeg, MB</a></li>
+                          <li><a href="service.html#heating">Furnace Replacement in Winnipeg, MB</a></li>
+                          <li><a href="service.html#heating">Furnace Tune-Up in Winnipeg, MB</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- Heat Pump -->
+                      <li class="menu-item-has-children">
+                        <a href="#">Heat Pump</a>
+                        <ul class="sub-menu">
+                          <li><a href="service.html#heat-pump">Heat Pump Maintenance in Winnipeg, MB</a></li>
+                          <li><a href="service.html#heat-pump">Heat Pump Replacement in Winnipeg, MB</a></li>
+                          <li><a href="service.html#heat-pump">Heat Pump Service in Winnipeg, MB</a></li>
+                          <li><a href="service.html#heat-pump">Heating Company in Winnipeg, MB</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- Mini Split -->
+                      <li class="menu-item-has-children">
+                        <a href="#">Mini Split</a>
+                        <ul class="sub-menu">
+                          <li><a href="service.html#mini-split">Mini Split HVAC in Winnipeg, MB</a></li>
+                        </ul>
+                      </li>
+
+                      <!-- Indoor Air Quality -->
+                      <li class="menu-item-has-children">
+                        <a href="#">Indoor Air Quality</a>
+                        <ul class="sub-menu">
+                          <li><a href="service.html#air-quality">Air Filter Replacement in Winnipeg, MB</a></li>
+                        </ul>
+                      </li>
+
                     </ul>
                   </li>
-                  <li class="menu-item-has-children"><a href="#">Blog</a>
-                    <ul class="sub-menu">
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item-has-children"><a href="#">Project</a>
-                    <ul class="sub-menu">
-                      <li><a href="project.html">Project</a></li>
-                      <li><a href="project-details.html">Project Details</a></li>
-                    </ul>
-                  </li>
+                  <!-- SERVICES DROPDOWN END -->
+
+                  <li><a href="financing.html">Financing</a></li>
+                  <li><a href="pricing.html">Maintenance Plan</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="location.html">Location</a></li>
                 </ul>
-              </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i></button>
+              </nav>
+              <button type="button" class="th-menu-toggle d-block d-lg-none">
+                <i class="far fa-bars"></i></button>
             </div>
             <div class="col-auto d-none d-xl-block">
               <div class="header-button"><a class="header-call" href="tel:+0001234567"><span class="icon-btn"><i
-                      class="fas fa-phone-volume"></i></span> (000) 123 - 4567</a></div>
+                      class="fas fa-phone-volume"></i></span>  +(204) 951-1317</a></div>
             </div>
           </div>
         </div>
@@ -212,13 +360,13 @@
       <div class="breadcumb-content">
         <h1 class="breadcumb-title">Our Services</h1>
         <ul class="breadcumb-menu">
-          <li><a href="home-handyman.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li>Our Services</li>
         </ul>
       </div>
     </div>
   </div>
-  <section class="overflow-hidden space" id="service-sec">
+  <!-- <section class="overflow-hidden space" id="service-sec">
     <div class="shape-mockup spin" data-top="0%" data-right="0%"><img src="assets/img/shape/lines_1.png" alt="shape">
     </div>
     <div class="container">
@@ -324,7 +472,169 @@
         </div>
       </div>
     </div>
+  </section> -->
+  <section class="overflow-hidden space py-5" id="service-sec">
+    <div class="container">
+
+      <!-- SECTION TITLE -->
+      <div class="row justify-content-center mb-5 text-center">
+        <div class="col-xl-8 col-md-10">
+          <span class="sub-title d-inline-block mb-2">
+            <img src="assets/img/theme-img/title_icon.svg" alt="Icon" class="me-2">
+            Our Services
+          </span>
+          <h2 class="sec-title mb-3" style="margin-top: 20px;">Comprehensive HVAC Services We Offer</h2>
+          <p class="sec-text mb-0">
+            From cooling comfort to heating solutions and cleaner indoor air — we deliver reliable, energy-efficient,
+            and affordable HVAC services across Winnipeg, MB.
+          </p>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- Air Conditioning -->
+      <!-- ============================= -->
+      <div class="row align-items-center gy-5 mb-5 service-zigzag" id="air-conditioning">
+        <div class="col-lg-6">
+          <div class="service-img">
+            <img
+              src="https://cdn.prod.website-files.com/6798e4b2c4bed23d201b59b5/67f8dc0eedd7189a91c551c0_67c795b6d890f7beb3c71779_dealer-compressor-install301e4d77073d629eabb1ff0300454ea0.webp"
+              alt="Air Conditioning" class="img-fluid rounded shadow">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-content ps-lg-4">
+            <h3>Air Conditioning Services</h3>
+            <p>Beat the summer heat with our complete range of AC services — from expert installation to fast repair and
+              professional tune-ups, we’ve got your cooling covered.</p>
+            <ul class="list-unstyled mb-3">
+              <li><strong>AC Replacement in Winnipeg, MB:</strong> Upgrade to an energy-efficient unit for reliable
+                cooling.</li>
+              <li><strong>AC Service & Tune-Up:</strong> Regular maintenance ensures peak performance and longer system
+                life.</li>
+            </ul>
+            <a href="contact.html" class="th-btn btn-sm">Contact for Service <i class="far fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- Heating -->
+      <!-- ============================= -->
+      <div class="row align-items-center gy-5 mb-5 service-zigzag flex-lg-row-reverse" id="heating">
+        <div class="col-lg-6">
+          <div class="service-img">
+            <img
+              src="https://cdn.prod.website-files.com/6798e4b2c4bed23d201b59b5/67d3d15d8720cac85b7299e9_HeatPumpRepair.webp"
+              alt="Heating" class="img-fluid rounded shadow">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-content pe-lg-4 text-lg-end">
+            <h3>Heating & Furnace Services</h3>
+            <p>Stay cozy even in harsh winters with our trusted furnace installation, maintenance, and repair services
+              handled by certified experts.</p>
+            <ul class="list-unstyled text-lg-end mb-3">
+              <li><strong>Furnace Installation in Winnipeg, MB:</strong> Safe and efficient setup of new heating
+                systems.</li>
+              <li><strong>Furnace Maintenance in Winnipeg, MB:</strong> Prevent breakdowns and keep your furnace running
+                smoothly.</li>
+              <li><strong>Furnace Repair in Winnipeg, MB:</strong> Quick fixes to restore warmth and comfort.</li>
+              <li><strong>Furnace Replacement in Winnipeg, MB:</strong> Modern upgrades that save energy and money.</li>
+              <li><strong>Furnace Tune-Up in Winnipeg, MB:</strong> Routine checkups for long-lasting performance.</li>
+            </ul>
+            <a href="contact.html" class="th-btn btn-sm">Contact for Service <i class="far fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- Heat Pump -->
+      <!-- ============================= -->
+      <div class="row align-items-center gy-5 mb-5 service-zigzag" id="heat-pump">
+        <div class="col-lg-6">
+          <div class="service-img">
+            <img
+              src="https://cdn.prod.website-files.com/6798e4b2c4bed23d201b59b5/67f8dcc773b33d78c2a5758c_67c79687e19557669b98720f_dealer-furnace-installc41e4d77073d629eabb1ff0300454ea0.webp"
+              alt="Heat Pump" class="img-fluid rounded shadow">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-content ps-lg-4">
+            <h3>Heat Pump Solutions</h3>
+            <p>Enjoy year-round comfort with our eco-friendly heat pump systems designed for both heating and cooling
+              efficiency.</p>
+            <ul class="list-unstyled mb-3">
+              <li><strong>Heat Pump Maintenance in Winnipeg, MB:</strong> Ensure reliable performance with regular
+                servicing.</li>
+              <li><strong>Heat Pump Replacement in Winnipeg, MB:</strong> Modernize your setup for greater energy
+                savings.</li>
+              <li><strong>Heat Pump Service in Winnipeg, MB:</strong> Fast and dependable repair when you need it most.
+              </li>
+              <li><strong>Heating Company in Winnipeg, MB:</strong> Trusted local experts for all your heat pump needs.
+              </li>
+            </ul>
+            <a href="contact.html" class="th-btn btn-sm">Contact for Service <i class="far fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- Mini Split -->
+      <!-- ============================= -->
+      <div class="row align-items-center gy-5 mb-5 service-zigzag flex-lg-row-reverse" id="mini-split">
+        <div class="col-lg-6">
+          <div class="service-img">
+            <img
+              src="https://cdn.prod.website-files.com/6798e4b2c4bed23d201b59b5/67d3f0ad344b637ab6a9acd4_Minisplit-Installation.webp"
+              alt="Mini Split HVAC" class="img-fluid rounded shadow">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-content pe-lg-4 text-lg-end">
+            <h3>Mini Split HVAC Systems</h3>
+            <p>Experience quiet, efficient comfort with mini-split HVACs — the perfect solution for rooms without
+              ductwork.</p>
+            <ul class="list-unstyled text-lg-end mb-3">
+              <li><strong>Mini Split HVAC in Winnipeg, MB:</strong> Professional installation and service for zoned
+                climate control.</li>
+            </ul>
+            <a href="contact.html" class="th-btn btn-sm">Contact for Service <i class="far fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- Indoor Air Quality -->
+      <!-- ============================= -->
+      <div class="row align-items-center gy-5 mb-5 service-zigzag" id="air-quality">
+        <div class="col-lg-6">
+          <div class="service-img">
+            <img
+              src="https://cdn.prod.website-files.com/6798e4b2c4bed23d201b59b5/67d3f05862e5adc1556abfab_image_fx_%20(30).webp"
+              alt="Indoor Air Quality" class="img-fluid rounded shadow">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-content ps-lg-4">
+            <h3>Indoor Air Quality</h3>
+            <p>We help you breathe easier with professional air purification and filter replacement services that
+              improve your indoor environment.</p>
+            <ul class="list-unstyled mb-3">
+              <li><strong>Air Filter Replacement in Winnipeg, MB:</strong> Keep your air clean and allergen-free.</li>
+              <li><strong>Air Purifier Installation:</strong> Advanced systems to eliminate pollutants and odors.</li>
+              <li><strong>Duct Cleaning & Sanitization:</strong> Fresh, hygienic air circulation for your family’s
+                health.</li>
+            </ul>
+            <a href="contact.html" class="th-btn btn-sm">Contact for Service <i class="far fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
+
+
   <div class="overflow-hidden bg-white">
     <div class="shape-mockup moving d-none d-xxl-block" data-bottom="0%" data-right="0%"><img
         src="assets/img/shape/man_shape_1.png" alt="shape"></div>
@@ -399,7 +709,7 @@
       </div>
     </div>
   </div>
-  <div class="overflow-hidden space">
+  <!-- <div class="overflow-hidden space">
     <div class="container text-center">
       <div class="title-area text-center"><span class="sub-title"><img src="assets/img/theme-img/title_icon.svg"
             alt="Icon">Best Gallery</span>
@@ -516,7 +826,7 @@
         </div>
       </div><button class="th-btn load-more-btn">Load More<i class="fa-duotone fa-spinner ms-2"></i></button>
     </div>
-  </div>
+  </div> -->
   <section class="space" data-bg-src="assets/img/bg/pattern_bg_2.jpg">
     <div class="shape-mockup spin" data-top="15%" data-right="6%"><img src="assets/img/shape/dots_1.svg" alt="shape">
     </div>
@@ -527,7 +837,7 @@
         <div class="col-xl-8">
           <div class="title-area text-center"><span class="sub-title shape-white"><img
                 src="assets/img/theme-img/title_icon_white.svg" alt="Icon">Pricing Plan</span>
-            <h2 class="sec-title text-white">Our Best Pricing Plan</h2>
+            <h2 class="sec-title" style="color: #101840;">Our Best Pricing Plan</h2>
             <p class="sec-text text-light">The popular belief, Lorem Ipsum is not simply random text. It has roots in a
               piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.</p>
           </div>
@@ -725,7 +1035,7 @@
           <div class="footer-contact">
             <div class="box-icon"><i class="fas fa-location-dot"></i></div>
             <div class="media-body">
-              <p class="box-text">789 Inner Lane, Holy park, California, USA</p>
+              <p class="box-text">19 Stoney Lake Bay, Winnipeg, MB R2W 1K7, Canada</p>
             </div>
           </div>
           <div class="divider"></div>
@@ -733,7 +1043,7 @@
             <div class="box-icon"><i class="fas fa-phone-volume"></i></div>
             <div class="media-body">
               <h3 class="box-title">Call Us:</h3>
-              <p class="box-text"><a href="tel:+09876543210">+09 876 543 210</a></p>
+              <p class="box-text"><a href="tel:+09876543210"> +(204) 951-1317</a></p>
             </div>
           </div>
           <div class="divider"></div>
@@ -753,14 +1063,28 @@
           <div class="col-md-6 col-xl-auto">
             <div class="widget footer-widget">
               <div class="th-widget-about">
-                <div class="about-logo"><a href="home-handyman.html"><img src="assets/img/logo-footer.svg"
-                      alt="Rakar"></a></div>
+                <div class="about-logo"><a href="index.html"><img src="assets/img/logo/logo.svg" alt="Rakar"></a></div>
                 <p class="about-text">Going forward, a new normal that has evolved from generation is on the runway
                   heading towards a streamlined cloud solution.</p>
-                <div class="th-social"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a
-                    href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a
-                    href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a
-                    href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></div>
+                <div class="th-social">
+                  <a href="https://www.facebook.com/paswpg/">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/perfect_air_solutions">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+
+                  <a href="https://www.tiktok.com/@perfectairsolutions">
+                    <i class="fab fa-tiktok"></i>
+                  </a>
+
+                  <a
+                    href="https://www.google.com/search?sca_esv=e74a10221791e7e3&kgmid=/g/11rhgyz0jb&q=Perfect+Air+Solutions&shndl=30&shem=lcuae,uaasie&source=sh/x/loc/uni/m1/1&kgs=0ce2991fccfa46db">
+                    <i class="fab fa-google"></i>
+                  </a>
+
+                </div>
               </div>
             </div>
           </div>
@@ -771,9 +1095,8 @@
                 <ul class="menu">
                   <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About Us</a></li>
-                  <li><a href="about.html">Pricing Plan</a></li>
                   <li><a href="service.html">Services</a></li>
-                  <li><a href="about.html">Testimonial</a></li>
+                  <li><a href="pricing.html">Pricing Plan</a></li>
                   <li><a href="contact.html">Appointment</a></li>
                 </ul>
               </div>
@@ -784,17 +1107,19 @@
               <h3 class="widget_title"><img src="assets/img/icon/footer_title.svg" alt="icon"> Our Services</h3>
               <div class="menu-all-pages-container">
                 <ul class="menu">
-                  <li><a href="service-details.html">Refrigerator</a></li>
-                  <li><a href="service-details.html">Microwave</a></li>
-                  <li><a href="service-details.html">Cookware Stove</a></li>
-                  <li><a href="service-details.html">Washing Machine</a></li>
-                  <li><a href="service-details.html">Juicer Mixer</a></li>
-                  <li><a href="service-details.html">Generator Install</a></li>
+                  <ul class="footer-services">
+                    <li><a href="service.html#air-conditioning">Air Conditioning</a></li>
+                    <li><a href="service.html#heating">Heating</a></li>
+                    <li><a href="service.html#heat-pump">Heat Pump</a></li>
+                    <li><a href="service.html#mini-split">Mini Split</a></li>
+                    <li><a href="service.html#air-quality">Indoor Air Quality</a></li>
+                  </ul>
+
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-xl-auto">
+          <!-- <div class="col-md-6 col-xl-auto">
             <div class="widget newsletter-widget footer-widget">
               <h3 class="widget_title"><img src="assets/img/icon/footer_title.svg" alt="icon"> Newsletter</h3>
               <p class="footer-text">Get latest updates and offers.</p>
@@ -802,7 +1127,7 @@
                   required=""> <button type="submit" class="th-btn style3">Subscribe<i
                     class="far fa-arrow-right ms-2"></i></button></form>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -810,8 +1135,8 @@
       <div class="container">
         <div class="row gy-2 align-items-center">
           <div class="col-md-6">
-            <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a
-                href="home-handyman.html">Rakar</a>. All Rights Reserved.</p>
+            <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2025 <a href="index.html">Perfect Air Solutions</a>.
+              All Rights Reserved.</p>
           </div>
           <div class="col-md-6 text-center text-md-end">
             <div class="footer-links">
@@ -834,6 +1159,22 @@
   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="assets/js/app.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          // Delay scroll adjustment (wait until browser jump completes)
+          setTimeout(() => {
+            const yOffset = -100; // navbar height (adjust if needed)
+            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }, 200);
+        }
+      }
+    });
+  </script>
+
 </body>
 
 </html>
