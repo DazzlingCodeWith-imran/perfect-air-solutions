@@ -157,9 +157,9 @@
 
 <body>
   <div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
-    <div class="preloader-inner">
+    <!-- <div class="preloader-inner">
       <div class="loader"><span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div>
-    </div>
+    </div> -->
   </div>
   <div class="color-scheme"><button class="switchIcon"><i class="fa-solid fa-palette"></i></button>
     <h4 class="color-scheme-title"><i class="far fa-palette"></i> Color Switcher</h4>
@@ -341,100 +341,91 @@
   </section>
 
   <!-- ==================== FINANCING OPTIONS ==================== -->
-  <section class="space" data-bg-src="assets/img/bg/pattern_bg_2.jpg">
-    <div class="shape-mockup spin" data-top="15%" data-right="6%"><img src="assets/img/shape/dots_1.svg" alt="shape">
+ <section class="space">
+  <div class="container">
+    <div class="title-area text-center">
+      <span class="sub-title">
+        <img src="assets/img/theme-img/title_icon.svg" alt="Icon">Pricing Plan
+      </span>
+      <h2 class="sec-title">Choose a Plan That Fits Your Needs</h2>
+      <p class="sec-text">We’ve designed our plans to keep your comfort, budget, and peace of mind in balance.</p>
     </div>
-    <div class="shape-mockup spin" data-bottom="6%" data-left="4%"><img src="assets/img/shape/dots_1.svg" alt="shape">
-    </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-8">
-          <div class="title-area text-center"><span class="sub-title shape-white"><img
-                src="assets/img/theme-img/title_icon_white.svg" alt="Icon">Pricing Plan</span>
-            <h2 class="sec-title" style="color: #101840;">Our Best Pricing Plan</h2>
-            <p class="sec-text" style="color: #101840;">The popular belief, Lorem Ipsum is not simply random text. It
-              has roots in a
-              piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.</p>
+
+    <div class="row gy-4 tag-black justify-content-center">
+
+      <!-- Basic Plan -->
+      <div class="hover-item col-xl-4 col-md-6">
+        <div class="price-card">
+          <div class="box-shape">
+            <img src="assets/img/shape/lines_3.png" alt="shape">
+          </div>
+          <h3 class="box-title">Basic Care</h3>
+          <p class="box-price">$99<span class="duration">/month</span></p>
+          <div class="box-list">
+            <ul>
+              <li>1 Monthly Inspection</li>
+              <li>General Repair Check</li>
+              <li class="unavailable">Full Maintenance</li>
+              <li class="unavailable">Electrical Fault Fix</li>
+              <li class="unavailable">AC Service</li>
+            </ul>
+          </div>
+          <div class="box-footer">
+            <a href="pricing.html" class="th-btn">Get Started<i class="far fa-arrow-right ms-2"></i></a>
           </div>
         </div>
       </div>
-      <div class="row gy-4">
-        <div class="hover-item col-xl-3 col-md-6">
-          <div class="price-card">
-            <div class="box-shape"><img src="assets/img/shape/lines_3.png" alt="shape"></div>
-            <h3 class="box-title">Basic Plan</h3>
-            <p class="box-price">$99.00<span class="duration">/Monthly</span></p>
-            <div class="box-list">
-              <ul>
-                <li>Monthly Inspection</li>
-                <li>General Repair</li>
-                <li class="unavailable">Maintenance</li>
-                <li class="unavailable">Fixing of Faulty Wiring</li>
-                <li class="unavailable">Ac Condition Repair</li>
-              </ul>
-            </div>
-            <div class="box-footer"><a href="pricing.html" class="th-btn">Get Started<i
-                  class="far fa-arrow-right ms-2"></i></a></div>
+
+      <!-- Standard Plan -->
+      <div class="hover-item item-active col-xl-4 col-md-6">
+        <div class="price-card">
+          <div class="box-shape">
+            <img src="assets/img/shape/lines_3.png" alt="shape">
           </div>
-        </div>
-        <div class="hover-item item-active col-xl-3 col-md-6">
-          <div class="price-card">
-            <div class="box-shape"><img src="assets/img/shape/lines_3.png" alt="shape"></div><span class="tag">Popular
-              Plan</span>
-            <h3 class="box-title">Standard</h3>
-            <p class="box-price">$129.00<span class="duration">/Monthly</span></p>
-            <div class="box-list">
-              <ul>
-                <li>Monthly Inspection</li>
-                <li>General Repair</li>
-                <li>Maintenance</li>
-                <li class="unavailable">Fixing of Faulty Wiring</li>
-                <li class="unavailable">Ac Condition Repair</li>
-              </ul>
-            </div>
-            <div class="box-footer"><a href="pricing.html" class="th-btn">Get Started<i
-                  class="far fa-arrow-right ms-2"></i></a></div>
+          <span class="tag">Most Popular</span>
+          <h3 class="box-title">Standard Care</h3>
+          <p class="box-price">$149<span class="duration">/month</span></p>
+          <div class="box-list">
+            <ul>
+              <li>Monthly Inspection</li>
+              <li>General Repairs</li>
+              <li>Full Maintenance</li>
+              <li class="unavailable">Electrical Fault Fix</li>
+              <li class="unavailable">AC Service</li>
+            </ul>
           </div>
-        </div>
-        <div class="hover-item col-xl-3 col-md-6">
-          <div class="price-card">
-            <div class="box-shape"><img src="assets/img/shape/lines_3.png" alt="shape"></div>
-            <h3 class="box-title">Premium</h3>
-            <p class="box-price">$199.00<span class="duration">/Monthly</span></p>
-            <div class="box-list">
-              <ul>
-                <li>Monthly Inspection</li>
-                <li>General Repair</li>
-                <li>Maintenance</li>
-                <li>Fixing of Faulty Wiring</li>
-                <li class="unavailable">Ac Condition Repair</li>
-              </ul>
-            </div>
-            <div class="box-footer"><a href="pricing.html" class="th-btn">Get Started<i
-                  class="far fa-arrow-right ms-2"></i></a></div>
-          </div>
-        </div>
-        <div class="hover-item col-xl-3 col-md-6">
-          <div class="price-card">
-            <div class="box-shape"><img src="assets/img/shape/lines_3.png" alt="shape"></div>
-            <h3 class="box-title">Dedicated Plan</h3>
-            <p class="box-price">$299.00<span class="duration">/Monthly</span></p>
-            <div class="box-list">
-              <ul>
-                <li>Monthly Inspection</li>
-                <li>General Repair</li>
-                <li>Maintenance</li>
-                <li>Fixing of Faulty Wiring</li>
-                <li>Ac Condition Repair</li>
-              </ul>
-            </div>
-            <div class="box-footer"><a href="pricing.html" class="th-btn">Get Started<i
-                  class="far fa-arrow-right ms-2"></i></a></div>
+          <div class="box-footer">
+            <a href="pricing.html" class="th-btn">Get Started<i class="far fa-arrow-right ms-2"></i></a>
           </div>
         </div>
       </div>
+
+      <!-- Premium Plan -->
+      <div class="hover-item col-xl-4 col-md-6">
+        <div class="price-card">
+          <div class="box-shape">
+            <img src="assets/img/shape/lines_3.png" alt="shape">
+          </div>
+          <h3 class="box-title">Premium Care</h3>
+          <p class="box-price">$199<span class="duration">/month</span></p>
+          <div class="box-list">
+            <ul>
+              <li>Monthly Inspection</li>
+              <li>All General Repairs</li>
+              <li>Complete Maintenance</li>
+              <li>Electrical Fault Fix</li>
+              <li>AC Repair & Service</li>
+            </ul>
+          </div>
+          <div class="box-footer">
+            <a href="pricing.html" class="th-btn">Get Started<i class="far fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- ==================== FOOTER ==================== -->
